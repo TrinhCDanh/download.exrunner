@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Download</title>
+    <script>
+        function redirectToAppStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/us/app/exrunner-app/id6566178324";
+            }
+            else if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.exnodes.exrunner";
+            }
+            else {
+                window.location.href = "https://exrunner.exnodes.vn/";
+            }
+        }
+    </script>
+</head>
+
+<body onload="redirectToAppStore()">
+    <h1>Redirecting to Store...</h1>
+</body>
+
+</html>
